@@ -1,0 +1,7 @@
+def update_timer(self):
+    time_left = self.timer.get_time_left()
+    self.label.config(text=time_left)
+    if self.timer.is_timer_running() and self.timer.get_time_left() <= 0:
+        messagebox.showinfo("Session Ended", "Pomodoro session has ended!")
+    if self.timer.is_timer_running():
+        self.window.after(1000, self.update_timer)
