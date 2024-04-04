@@ -1,0 +1,16 @@
+
+sequenceDiagram
+    participant G as Game
+    participant B as Bird
+    participant P as Pipe
+    G->>B: __init__()
+    G->>P: __init__()
+    G->>G: update()
+    G->>G: draw()
+    G->>G: handle_input()
+    loop G
+        G->>B: update()
+        G->>P: update()
+        G->>G: draw()
+        G->>G: handle_input()
+    end

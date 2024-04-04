@@ -1,0 +1,14 @@
+
+class PomodoroTimer {
+        -int session_duration
+        -bool is_break
+        -bool is_running
+        +start_session()
+        +pause_session()
+        +resume_session()
+        +reset_session()
+        +update_time_display()
+        +send_notification(message: str)
+    }
+    PomodoroTimer --> tkinter
+    PomodoroTimer --> plyer

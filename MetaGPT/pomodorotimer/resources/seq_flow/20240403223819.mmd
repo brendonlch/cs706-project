@@ -1,0 +1,11 @@
+
+sequenceDiagram
+    participant PT as PomodoroTimer
+    participant TK as tkinter
+    participant PL as plyer
+    PT->>PT: start_session()
+    PT->>TK: update_time_display()
+    PT->>PL: send_notification('Session ended')
+    PT->>PT: pause_session()
+    PT->>PT: resume_session()
+    PT->>PT: reset_session()
